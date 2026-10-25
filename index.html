@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100d2c">
+  <meta name="description" content="Leran the skills — your colorful space to learn, practise and grow.">
+  <title>Leran the skills | Learn. Practise. Grow.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Logged-in User Bar -->
+<div id="userBar" style="
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 5%;
+  background: #10182e;
+  color: white;
+  border-bottom: 1px solid #29375c;
+  font-family: Arial, sans-serif;
+">
+  <span id="userEmail">Checking login...</span>
+
+  <button id="logoutBtn" type="button" style="
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #8250ff, #347cff);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  ">
+    Logout
+  </button>
+</div>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="ambient ambient-three"></div>
+
+  <header class="site-header">
+    <a href="#home" class="brand" aria-label="Leran the skills home">
+      <span class="brand-mark">L</span>
+      <span>Leran <b>the skills</b></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#home" onclick="closeMobileMenu()">Home</a>
+      <a href="#subjects" onclick="closeMobileMenu()">Subjects</a>
+      <a href="#tools" onclick="closeMobileMenu()">Tools</a>
+      <a href="#dashboard" onclick="closeMobileMenu()">Dashboard</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="languageToggle" class="language-button" aria-label="Change language">EN / اردو</button>
+      <a class="button button-small button-glow" href="#subjects">Start Learning <span>↗</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="live-dot"></span> YOUR NEXT CHAPTER STARTS HERE</div>
+        <h1>Learn something<br>amazing <span class="gradient-text">every day.</span></h1>
+        <p class="hero-description">
+          Welcome to <strong>Leran the skills</strong> — your personal space to
+          explore subjects, practise new skills and track your learning journey.
+        </p>
+        <div class="hero-actions">
+          <a href="#subjects" class="button button-primary">Explore Subjects <span>→</span></a>
+          <a href="#tools" class="button button-glass">Discover Tools <span>✦</span></a>
+        </div>
+        <div class="hero-proof">
+          <div class="proof-icons"><span>📚</span><span>💻</span><span>🧠</span></div>
+          <p><strong>Learn at your own pace</strong><br><span>Small steps. Big progress.</span></p>
+        </div>
+      </div>
+
+      <div class="hero-art reveal" aria-label="Decorative learning illustration">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="art-glow"></div>
+        <div class="floating-chip chip-book">📚 <span>Keep learning</span></div>
+        <div class="floating-chip chip-code">{"</>"} <span>Build skills</span></div>
+        <div class="floating-chip chip-star">✦</div>
+        <div class="learning-card">
+          <div class="card-topline"><span>YOUR LEARNING SPACE</span><span class="card-dots">•••</span></div>
+          <div class="book-illustration">
+            <div class="book book-back"></div>
+            <div class="book book-front">
+              <span class="book-symbol">✦</span>
+              <span class="book-title">KEEP<br>GROWING</span>
+              <span class="book-line"></span>
+              <span class="book-line short"></span>
+            </div>
+          </div>
+          <div class="art-caption">
+            <div><span class="caption-label">TODAY'S MINDSET</span><h3>Progress over perfection.</h3></div>
+            <span class="caption-sparkle">✧</span>
+          </div>
+          <div class="mini-progress"><span></span></div>
+        </div>
+        <div class="floating-icon icon-brain">🧠</div>
+        <div class="floating-icon icon-laptop">💻</div>
+        <div class="floating-icon icon-sparkle">✧</div>
+      </div>
+    </section>
+
+    <section class="stats-section section-wrap reveal" aria-label="Website statistics">
+      <div class="stat-card">
+        <span class="stat-icon purple-icon">◈</span>
+        <div><strong id="subjectStat">6</strong><span>Learning subjects</span></div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-icon blue-icon">✦</span>
+        <div><strong id="toolStat">8</strong><span>Useful tools</span></div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-icon pink-icon">✓</span>
+        <div><strong id="completedStat">0</strong><span>Topics completed</span></div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-icon yellow-icon">⚡</span>
+        <div><strong>∞</strong><span>Room to grow</span></div>
+      </div>
+    </section>
+
+    <section class="content-section section-wrap" id="subjects">
+  <div class="section-heading reveal">
+    <div>
+      <span class="eyebrow">PICK YOUR PATH</span>
+      <h2>Explore <span class="gradient-text">subjects.</span></h2>
+    </div>
+    <p>Discover a new interest or strengthen a skill you already have.</p>
+  </div>
+
+  <div class="subject-grid">
+
+    <article class="subject-card subject-purple reveal">
+      <div class="subject-icon">💻</div>
+      <span class="subject-number">01</span>
+      <h3>Programming</h3>
+      <p>Explore coding, logic and the art of building things.</p>
+      <a href="course.html?subject=programming">Explore Programming →</a>
+    </article>
+
+    <article class="subject-card subject-blue reveal">
+      <div class="subject-icon">🌐</div>
+      <span class="subject-number">02</span>
+      <h3>Networking</h3>
+      <p>Understand networks, connections and communication.</p>
+      <a href="course.html?subject=networking">Explore Networking →</a>
+    </article>
+
+    <article class="subject-card subject-pink reveal">
+      <div class="subject-icon">🛡️</div>
+      <span class="subject-number">03</span>
+      <h3>Cybersecurity</h3>
+      <p>Learn about digital safety and protecting information.</p>
+      <a href="course.html?subject=cybersecurity">Explore Cybersecurity →</a>
+    </article>
+
+    <article class="subject-card subject-orange reveal">
+      <div class="subject-icon">➗</div>
+      <span class="subject-number">04</span>
+      <h3>Mathematics</h3>
+      <p>Practise problem-solving and build confidence with numbers.</p>
+      <a href="course.html?subject=mathematics">Explore Mathematics →</a>
+    </article>
+
+    <article class="subject-card subject-green reveal">
+      <div class="subject-icon">📖</div>
+      <span class="subject-number">05</span>
+      <h3>English</h3>
+      <p>Grow your vocabulary, grammar and communication skills.</p>
+      <a href="course.html?subject=english">Explore English →</a>
+    </article>
+
+    <article class="subject-card subject-cyan reveal">
+      <div class="subject-icon">🌎</div>
+      <span class="subject-number">06</span>
+      <h3>General Knowledge</h3>
+      <p>Discover fascinating facts about the world around you.</p>
+      <a href="course.html?subject=general">Explore General Knowledge →</a>
+    </article>
+
+  </div>
+</section>
+
+    <section class="tools-section" id="tools">
+      <div class="section-wrap">
+        <div class="section-heading reveal">
+          <div><span class="eyebrow">YOUR STUDY TOOLKIT</span><h2>Make learning <span class="gradient-text">easier.</span></h2></div>
+          <p>Handy tools to help you study, practise and stay organised.</p>
+        </div>
+
+        <div class="tools-grid">
+          <button type="button" class="tool-card reveal">
+            <span class="tool-icon tool-violet">📝</span><span class="tool-tag">ORGANISE</span>
+            <strong>Study Notes</strong><span class="tool-description">Write and save your study notes.</span><span class="tool-arrow">↗</span>
+          </button>
+          <button type="button" class="tool-card reveal">
+            <span class="tool-icon tool-blue">🧩</span><span class="tool-tag">PRACTISE</span>
+            <strong>MCQ Quiz</strong><span class="tool-description">Test your knowledge with questions.</span><span class="tool-arrow">↗</span>
+          </button>
+          <button type="button" class="tool-card reveal">
+            <span class="tool-icon tool-pink">⏱️</span><span class="tool-tag">FOCUS</span>
+            <strong>Study Timer</strong><span class="tool-description">Create focused study sessions.</span><span class="tool-arrow">↗</span>
+          </button>
+          <button type="button" class="tool-card reveal">
+            <span class="tool-icon tool-orange">🗂️</span><span class="tool-tag">REMEMBER</span>
+            <strong>Flashcards</strong><span class="tool-description">Review key facts and definitions.</span><span class="tool-arrow">↗</span>
+          </button>
+          <button type="button" class="tool-card reveal">
+            <span class="tool-icon tool-cyan">🔢</span><span class="tool-tag">CALCULATE</span>
+            <strong>Calculator</strong><span class="tool-description">Solve everyday maths problems.</span><span class="tool-arrow">↗</span>
+          </button>
+          <button type="button" class="tool-card reveal">
+            <span class="tool-icon tool-green">🔤</span><span class="tool-tag">WRITE</span>
+            <strong>Word Counter</strong><span class="tool-description">Count words and characters in text.</span><span class="tool-arrow">↗</span>
+          </button>
+          <button type="button" class="tool-card reveal">
+            <span class="tool-icon tool-violet">📚</span><span class="tool-tag">RESOURCES</span>
+            <strong>PDF Resources</strong><span class="tool-description">Explore study material added to the website.</span><span class="tool-arrow">↗</span>
+          </button>
+          <button type="button" class="tool-card reveal">
+            <span class="tool-icon tool-pink">📈</span><span class="tool-tag">YOUR JOURNEY</span>
+            <strong>Progress Tracking</strong><span class="tool-description">Review completed topics and your progress.</span><span class="tool-arrow">↗</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="dashboard-section section-wrap" id="dashboard">
+      <div class="dashboard-panel reveal">
+        <div class="dashboard-copy">
+          <span class="eyebrow">EVERY STEP COUNTS</span>
+          <h2>Your progress.<br><span class="gradient-text">Your achievement.</span></h2>
+          <p>Keep track of the topics you complete and celebrate every step forward. Your learning journey starts with one small step.</p>
+          <button type="button" class="button button-primary" onclick="openProgressTracker()">View My Progress <span>→</span></button>
+        </div>
+        <div class="dashboard-art">
+          <div class="progress-orb"><span>✦</span><strong>GROW</strong><small>ONE DAY AT A TIME</small></div>
+          <div class="dash-pill dash-pill-one">🎯 Stay focused</div>
+          <div class="dash-pill dash-pill-two">🌱 Keep improving</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta section-wrap reveal">
+      <div class="cta-star">✦</div>
+      <span class="eyebrow">READY WHEN YOU ARE</span>
+      <h2>Small steps can lead to <span class="gradient-text">big things.</span></h2>
+      <p>Choose a subject, open a tool and make today a little more productive.</p>
+      <a href="#subjects" class="button button-primary">Start Your Journey <span>→</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a href="#home" class="brand"><span class="brand-mark">L</span><span>Leran <b>the skills</b></span></a>
+    <p>Learn with curiosity. Grow with confidence.</p>
+    <a href="#home" class="back-top">Back to top ↑</a>
+    <div class="footer-bottom">© <span id="currentYear"></span> Leran the skills. Keep learning.</div>
+  </footer>
+
+  <div id="toast-container" aria-live="polite"></div>
+
+  <!-- Keep your existing app.js file. -->
+  <script src="app.js"></script>
+  <script>
+    // Mobile navigation
+  const pageMenuToggle = document.getElementById("menuToggle");
+const pageMainNav = document.getElementById("mainNav");
+
+   if (pageMenuToggle && pageMainNav) {
+  pageMenuToggle.addEventListener("click", () => {
+    const isOpen = pageMainNav.classList.toggle("nav-open");
+    pageMenuToggle.setAttribute("aria-expanded", String(isOpen));
+    pageMenuToggle.textContent = isOpen ? "✕" : "☰";
+  });
+   }
+    // Reveal sections as they enter the screen
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach((element) => {
+  element.classList.add("is-visible");
+});
+
+    // Live counts from the actual page and saved local progress
+    function updateLearningStats() {
+      document.getElementById("subjectStat").textContent =
+        document.querySelectorAll(".subject-card").length;
+
+      document.getElementById("toolStat").textContent =
+        document.querySelectorAll(".tool-card").length;
+
+      let completed = 0;
+      try {
+        const saved = JSON.parse(localStorage.getItem("leranSkillsCompletedTopics") || "[]");
+        if (Array.isArray(saved)) {
+          completed = saved.length;
+        } else if (saved && typeof saved === "object") {
+          completed = Object.values(saved).filter(Boolean).length;
+        }
+      } catch (error) {
+        completed = 0;
+      }
+
+      document.getElementById("completedStat").textContent = completed;
+    }
+
+    function closeMobileMenu() {
+      mainNav.classList.remove("nav-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.textContent = "☰";
+    }
+
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+    updateLearningStats();
+    window.addEventListener("storage", updateLearningStats);
+    // Refresh the saved-topic count while the page is open.
+    setInterval(updateLearningStats, 1500);
+  </script>
+<script type="module">
+  import { auth } from "./firebase.js";
+
+  import {
+    onAuthStateChanged,
+    signOut
+  } from "https://www.gstatic.com/firebasejs/13.1.0/firebase-auth.js";
+
+  const userEmail = document.getElementById("userEmail");
+  const logoutBtn = document.getElementById("logoutBtn");
+
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      userEmail.textContent = "👤 " + user.email;
+      logoutBtn.style.display = "inline-block";
+    } else {
+      window.location.replace("./login.html");
+    }
+  });
+
+  logoutBtn.addEventListener("click", async () => {
+    logoutBtn.disabled = true;
+    logoutBtn.textContent = "Logging out...";
+
+    try {
+      await signOut(auth);
+      window.location.replace("./login.html");
+    } catch (error) {
+      console.error("Logout error:", error);
+      userEmail.textContent = "Logout nahi hua. Dobara try karo.";
+      logoutBtn.disabled = false;
+      logoutBtn.textContent = "Logout";
+    }
+  });
+</script>
+</body>
+</html>
